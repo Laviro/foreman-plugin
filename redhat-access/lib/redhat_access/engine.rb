@@ -183,6 +183,13 @@ module RedhatAccess
                      :url_hash => {:controller => :"redhat_access/analytics_dashboard", :action => :index},
                      :engine => RedhatAccess::Engine,
                      :turbolinks => false
+            rha_menu :top_menu,
+                     :rhai_test,
+                     :caption => N_('Reports test'),
+                     :url => '/redhat_access/insights/reports',
+                     :url_hash => {:controller => :"redhat_access/analytics_dashboard", :action => :index},
+                     :engine => RedhatAccess::Engine,
+                     :turbolinks => false
           end
           widget 'insights_issues_widget', :name => 'Red Hat Insights Actions', :sizey => 1, :sizex => 6
           widget 'insights_risk_widget', :name => 'Red Hat Insights Risk Summary', :sizey => 1, :sizex => 6

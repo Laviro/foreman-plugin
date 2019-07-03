@@ -39,6 +39,10 @@
                 url: '/help',
                 templateUrl: '/redhat_access/insights/templates/help' //TODO HACK
             });
+            $stateProvider.state('reports', {
+                url: '/reports',
+                templateUrl: '/redhat_access/insights/templates/reports' //TODO HACK
+            });
             $stateProvider.state('serviceerror', {
                 url: '/proxyerror',
                 templateUrl: '/redhat_access/insights/templates/error' //TODO HACK

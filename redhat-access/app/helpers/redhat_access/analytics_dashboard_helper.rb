@@ -12,8 +12,15 @@ module RedhatAccess
       request.path == '/redhat_access/insights/manage'
     end
 
+    def reports_path?
+      Rails.logger.info("Reports path ? #{request.path == '/redhat_access/insights/reports'}")
+      request.path == '/redhat_access/insights/reports'
+    end
+
     def view_preconditions_met?
       if (help_path?)
+        return true
+      elsif (reports_path?)
         return true
       elsif (!is_org_selected?)
         return false
